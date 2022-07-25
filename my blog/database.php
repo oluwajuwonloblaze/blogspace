@@ -1,0 +1,49 @@
+<?php
+  $host = 'localhost';
+  $user = 'root';
+  $pass = '';
+  $file = 'blog';
+$con = new mysqli($host,$user,$pass,$file);
+if ($con->connect_error) {
+    die("connection failed" . $con->connect_error);
+}
+
+ 
+class db {
+ public function insert($con,$sqlquery) {
+    if ($con->query($sqlquery)) {
+        echo 'worked';
+}
+    else {
+         echo 'errors';
+    }
+ }
+ public function read ($con, $sqlquery) {
+    if ($con->query($sqlquery)) {
+        echo 'worked';
+    }
+    else {
+         echo 'errors';
+    } 
+ }
+ public function update ($con, $sqlquery) {
+    if ($con->query($sqlquery)) {
+        echo 'worked';
+    }
+    else {
+         echo 'errors';
+    } 
+ }
+ public function delete ($con, $sqlquery) {
+    if ($con->query($sqlquery)) {
+        echo 'worked';
+    }
+    else {
+         echo 'errors';
+    } 
+ }
+
+}
+
+
+?>
