@@ -1,0 +1,12 @@
+<?php
+require_once("crud.php");
+class auth  extends db {
+function signin (){
+    $checkuser = $con->query("SELECT * FROM users_table WHERE username = '$user'");
+    if ($conn->affected_rows  >0 ) {
+        echo "exists";
+    }
+}
+}
+$signin = new auth ();
+?>
